@@ -12,4 +12,5 @@ class Haltestelle: NSObject {
     
     var name : NSString?
     var ort : NSString?
+    var id : NSString?
 }

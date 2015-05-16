@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol SearchViewControllerDelegate {
+    func selectHaltestelle(haltestelle : Haltestelle)
+}
+
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var haltestellen = NSMutableArray()
     var suchergebnis = NSMutableArray()
+    var searchTable : UITableView?
+    var delegate😀 : SearchViewControllerDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +48,16 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             var haltestelle = Haltestelle()
             haltestelle.name = haltestellenString.componentsSeparatedByString(";")[0]
             haltestelle.ort = haltestellenString.componentsSeparatedByString(";")[1]
+            haltestelle.id = haltestellenString.componentsSeparatedByString(";")[2]
             println(haltestelle.name)
             haltestellen.addObject(haltestelle)
         }
         
         
-        var searchTable = UITableView(frame: CGRectMake(0, 64+44, self.view.frame.size.width, self.view.frame.size.height), style: UITableViewStyle.Plain)
-        self.view.addSubview(searchTable)
-        searchTable.delegate=self
-        searchTable.dataSource=self
+        searchTable = UITableView(frame: CGRectMake(0, 64+44, self.view.frame.size.width, self.view.frame.size.height), style: UITableViewStyle.Plain)
+        self.view.addSubview(searchTable!)
+        searchTable?.delegate=self
+        searchTable?.dataSource=self
         
         
         // Do any additional setup after loading the view.
@@ -64,8 +72,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         
         var haltestelle : Haltestelle = suchergebnis[indexPath.row] as! Haltestelle
         
-        cell.textLabel?.text = haltestelle.ort! as String
-        cell.detailTextLabel?.text = haltestelle.name! as String
+        cell.textLabel?.text = haltestelle.name! as String
+        cell.detailTextLabel?.text = haltestelle.ort! as String
         
         return cell
     }
@@ -79,13 +87,28 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         return 66;
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var haltestelle : Haltestelle = suchergebnis[indexPath.row] as! Haltestelle
+        delegate😀?.selectHaltestelle(haltestelle)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        println(searchText)
+        suchergebnis.removeAllObjects()
+        
+        for haltestelle in haltestellen {
+            if haltestelle.name.lowercaseString.rangeOfString(searchText.lowercaseString) != nil {
+                suchergebnis.addObject(haltestelle)
+            }
+        }
+        searchTable!.reloadData()
+        
     }
     
     
     
     func done() {
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     

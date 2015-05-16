@@ -17,6 +17,7 @@
 		51CB1AB71B0781320053D939 /* MeineRoutenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */; };
 		51CB1AB91B0782960053D939 /* fake_ludwigstraße.csv in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */; };
 		51CB1ABB1B0783880053D939 /* Haltestelle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1ABA1B0783880053D939 /* Haltestelle.swift */; };
+		51CB1ABD1B079EFD0053D939 /* FakeSpinWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1ABC1B079EFD0053D939 /* FakeSpinWaitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeineRoutenViewController.swift; sourceTree = "<group>"; };
 		51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fake_ludwigstraße.csv"; sourceTree = "<group>"; };
 		51CB1ABA1B0783880053D939 /* Haltestelle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haltestelle.swift; sourceTree = "<group>"; };
+		51CB1ABC1B079EFD0053D939 /* FakeSpinWaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSpinWaitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				51CB1AB41B077CF90053D939 /* SearchViewController.swift */,
 				51CB1ABA1B0783880053D939 /* Haltestelle.swift */,
 				51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */,
+				51CB1ABC1B079EFD0053D939 /* FakeSpinWaitViewController.swift */,
 				51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */,
 				51CB1A991B075DDF0053D939 /* Images.xcassets */,
 				51CB1A9B1B075DDF0053D939 /* LaunchScreen.xib */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CB1ABD1B079EFD0053D939 /* FakeSpinWaitViewController.swift in Sources */,
 				51CB1AB71B0781320053D939 /* MeineRoutenViewController.swift in Sources */,
 				51CB1AB51B077CF90053D939 /* SearchViewController.swift in Sources */,
 				51CB1A951B075DDF0053D939 /* ViewController.swift in Sources */,

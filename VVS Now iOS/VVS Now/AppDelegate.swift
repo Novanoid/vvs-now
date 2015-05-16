@@ -14,7 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     var window: UIWindow?
     static var uuid : NSString?
+    static var meineZiele = NSMutableArray()
     let locationManager = CLLocationManager()
+    static var baseURL = "http://144.76.172.187:8000"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
