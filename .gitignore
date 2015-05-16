@@ -1,4 +1,5 @@
 #local settings file
+*.DS_Store
 mealhub/settings/local.py
 #pycharm folder
 .idea/
