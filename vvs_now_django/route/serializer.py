@@ -18,5 +18,3 @@ class LineSerializer(serializers.HyperlinkedModelSerializer):
                   'start_point_id',
                   'end_point_id',
                   'vehicle')
-
-        

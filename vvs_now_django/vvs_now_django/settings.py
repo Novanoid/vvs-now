@@ -41,8 +41,9 @@ INSTALLED_APPS = (
     'django_extensions',
     'user',
     'route',
+    'djcelery'
 )
-
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

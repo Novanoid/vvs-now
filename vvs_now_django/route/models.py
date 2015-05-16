@@ -16,3 +16,9 @@ class Line(models.Model):
     start_point_id = models.IntegerField()
     end_point_id = models.IntegerField()
     vehicle = models.IntegerField()
+
+
+class Task(models.Model):
+    user = models.ForeignKey('user.User')
+    destination = models.IntegerField()
+    time = models.DateTimeField()
