@@ -39,9 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'django_extensions',
-    'user'
+    'user',
+    'route',
+    'djcelery'
 )
-
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'vvs_now_django.wsgi.application'
-
+SHELL_PLUS = "ipython"
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

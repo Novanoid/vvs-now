@@ -17,7 +17,18 @@ class User(AbstractBaseUser):
     def get_short_name(self):
         return self.first_name
 
+    def __str__(self):
+        return "id: {}".format(self.pk)
 
-class AppleDeviceToken:
+
+class AppleDeviceToken(models.Model):
     user = models.ForeignKey('User')
     token = models.CharField(max_length=64, unique=True)
+    gps = models.ForeignKey("UserGPSLocation")
+
+
+class UserGPSLocation(models.Model):
+    user = models.ForeignKey("User")
+    latitude = models.FloatField(null=True)
+    longitude = models.FloatField(null=True)
+    last_update = models.DateTimeField(auto_now=True)
