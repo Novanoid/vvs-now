@@ -12,6 +12,11 @@
 		51CB1A9A1B075DDF0053D939 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1A991B075DDF0053D939 /* Images.xcassets */; };
 		51CB1A9D1B075DDF0053D939 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1A9B1B075DDF0053D939 /* LaunchScreen.xib */; };
 		51CB1AA91B075DDF0053D939 /* VVS_NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1AA81B075DDF0053D939 /* VVS_NowTests.swift */; };
+		51CB1AB31B076B180053D939 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CB1AB21B076B180053D939 /* CoreLocation.framework */; };
+		51CB1AB51B077CF90053D939 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1AB41B077CF90053D939 /* SearchViewController.swift */; };
+		51CB1AB71B0781320053D939 /* MeineRoutenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */; };
+		51CB1AB91B0782960053D939 /* fake_ludwigstraße.csv in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */; };
+		51CB1ABB1B0783880053D939 /* Haltestelle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1ABA1B0783880053D939 /* Haltestelle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 		51CB1AA21B075DDF0053D939 /* VVS NowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VVS NowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CB1AA71B075DDF0053D939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51CB1AA81B075DDF0053D939 /* VVS_NowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVS_NowTests.swift; sourceTree = "<group>"; };
+		51CB1AB21B076B180053D939 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		51CB1AB41B077CF90053D939 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeineRoutenViewController.swift; sourceTree = "<group>"; };
+		51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fake_ludwigstraße.csv"; sourceTree = "<group>"; };
+		51CB1ABA1B0783880053D939 /* Haltestelle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haltestelle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CB1AB31B076B180053D939 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +68,7 @@
 		51CB1A841B075DDF0053D939 = {
 			isa = PBXGroup;
 			children = (
+				51CB1AB21B076B180053D939 /* CoreLocation.framework */,
 				51CB1A8F1B075DDF0053D939 /* VVS Now */,
 				51CB1AA51B075DDF0053D939 /* VVS NowTests */,
 				51CB1A8E1B075DDF0053D939 /* Products */,
@@ -77,6 +89,10 @@
 			children = (
 				51CB1A921B075DDF0053D939 /* AppDelegate.swift */,
 				51CB1A941B075DDF0053D939 /* ViewController.swift */,
+				51CB1AB41B077CF90053D939 /* SearchViewController.swift */,
+				51CB1ABA1B0783880053D939 /* Haltestelle.swift */,
+				51CB1AB61B0781320053D939 /* MeineRoutenViewController.swift */,
+				51CB1AB81B0782960053D939 /* fake_ludwigstraße.csv */,
 				51CB1A991B075DDF0053D939 /* Images.xcassets */,
 				51CB1A9B1B075DDF0053D939 /* LaunchScreen.xib */,
 				51CB1A901B075DDF0053D939 /* Supporting Files */,
@@ -194,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CB1AB91B0782960053D939 /* fake_ludwigstraße.csv in Resources */,
 				51CB1A9D1B075DDF0053D939 /* LaunchScreen.xib in Resources */,
 				51CB1A9A1B075DDF0053D939 /* Images.xcassets in Resources */,
 			);
@@ -213,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CB1AB71B0781320053D939 /* MeineRoutenViewController.swift in Sources */,
+				51CB1AB51B077CF90053D939 /* SearchViewController.swift in Sources */,
 				51CB1A951B075DDF0053D939 /* ViewController.swift in Sources */,
 				51CB1A931B075DDF0053D939 /* AppDelegate.swift in Sources */,
+				51CB1ABB1B0783880053D939 /* Haltestelle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
