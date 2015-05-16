@@ -23,6 +23,8 @@ class LineViewSet(viewsets.ModelViewSet):
 
 def create_task(request, user_id, destination, time):
     print(destination)
+
+    time, rest = time.split(".")
     print(time)
     time = datetime.datetime.utcfromtimestamp(int(time))
     task = Task(time=time, destination=destination, user_id=user_id)
