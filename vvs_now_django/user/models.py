@@ -17,6 +17,9 @@ class User(AbstractBaseUser):
     def get_short_name(self):
         return self.first_name
 
+    def __str__(self):
+        return "id: {}".format(self.pk)
+
 
 class AppleDeviceToken:
     user = models.ForeignKey('User')

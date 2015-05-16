@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'django_extensions',
-    'user'
+    'user',
+    'route',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -72,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'vvs_now_django.wsgi.application'
-
+SHELL_PLUS = "ipython"
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

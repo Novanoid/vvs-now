@@ -17,11 +17,14 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 from user.views import UserViewSet
+from route.views import LineViewSet, RouteViewSet
 
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'lines', LineViewSet)
+router.register(r'routes', RouteViewSet)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
