@@ -27,7 +27,7 @@ router.register(r'users', UserViewSet)
 
 
 urlpatterns = [
-    url(r'^tasks/(?P<user_id>[0-9]+)/Optional\((?P<destination>[0-9]+)\)/Optional\((?P<time>[0-9]+)\)/', create_task),
+    url(r'^tasks/(?P<user_id>[0-9]+)/(?P<destination>[0-9]+)/(?P<time>[0-9.]+)/', create_task),
     url(r'^gps/(?P<user_id>[0-9]+)/(?P<lat>[0-9.]+)/(?P<long>[0-9.]+)/', update_gps),
     url(r'^token/(?P<user_id>[0-9]+)/(?P<token>)[\d\w]+/', create_toke),
     url(r'^admin/', include(admin.site.urls)),

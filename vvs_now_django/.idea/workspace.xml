@@ -88,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/vvs_now_django/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5680087" vertical-offset="0" max-vertical-offset="919">
-              <caret line="29" column="100" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
+              <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
               <folding>
                 <element signature="e#623#664#0" expanded="true" />
               </folding>
@@ -635,7 +635,7 @@
     <entry file="file://$PROJECT_DIR$/vvs_now_django/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5680087" vertical-offset="0" max-vertical-offset="919">
-          <caret line="29" column="100" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
+          <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
           <folding>
             <element signature="e#623#664#0" expanded="true" />
           </folding>
